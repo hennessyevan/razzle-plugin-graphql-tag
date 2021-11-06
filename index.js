@@ -15,7 +15,7 @@ module.exports = {
 		loader: "graphql-tag/loader"
 	});
 
-	webpackConfig.module.rules[config.module.rules.findIndex(makeLoaderFinder("file-loader"))].exclude.push(/\.(graphql|gql)$/);
+	webpackConfig.module.rules[webpackConfig.module.rules.findIndex(makeLoaderFinder("file-loader"))].exclude.push(/\.(graphql|gql)$/);
 
 	return webpackConfig;
   }
